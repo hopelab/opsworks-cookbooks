@@ -14,7 +14,7 @@
 
 <% @db = @database[:additional_database] %>
 <% if @db -%>
-<%= "#{@db[:name].to_s.inspect}_" %><%= env %>:
+<%= "#{@db[:name].to_s.inspect}_#{env}" %>:
   adapter: <%= @db[:adapter].to_s.inspect %>
   database: <%= @db[:database].to_s.inspect %>
   encoding: utf8
