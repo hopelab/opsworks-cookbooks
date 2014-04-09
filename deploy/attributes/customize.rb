@@ -1,0 +1,1 @@
+normal[:deploy][:sample][:database][:adapter] = 'sqlite3'
