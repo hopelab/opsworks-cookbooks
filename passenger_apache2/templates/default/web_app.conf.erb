@@ -12,6 +12,7 @@
   <%= @params[:deploy][:passenger_handler] -%>BaseURI /
   <% end -%>
   <%= @params[:deploy][:passenger_handler] -%>Env <%= @params[:rails_env] %>
+
   Header set Access-Control-Allow-Origin "*"
 
   <Directory <%= @params[:docroot] %>>
@@ -19,6 +20,7 @@
     AllowOverride None
     Order allow,deny
     Allow from all
+    Header set Access-Control-Allow-Origin "*"
   </Directory>
 
   <Directory ~ "\.svn">
